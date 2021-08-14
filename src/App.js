@@ -1,8 +1,13 @@
+import React from 'react';
+import Accordion from './components/Accordion';
 
-function App() {
-  return (
-    <div>Widgets</div>
+
+
+export default () => {
+  return(
+    <div>
+      <Accordion />
+    </div>
   );
-}
-
-export default App;
+};
+// this is branch b1
