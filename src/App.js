@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 
 
 const items = [
@@ -35,11 +36,24 @@ const options = [
 ];
 
 export default () => {
-  return(
+
+  const [selected, setSelected] = useState(options[0]);
+  const [showDropdown, setShowDropdown] = useState(true);
+
+  return (
     <div className="container">
       {/* <Accordion items={items}/> */}
       {/* <Search /> */}
-      <Dropdown options={options} />
+      {/* <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
+      {showDropdown ? (
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        />
+      ) : null} */}
+      <Translate />
+      {/* <div style={{ color: `${selected.value}`}}>The coloured TEXT!!!</div> */}
     </div>
   );
 };
